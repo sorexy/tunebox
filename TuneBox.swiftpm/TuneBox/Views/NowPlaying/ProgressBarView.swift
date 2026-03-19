@@ -42,7 +42,7 @@ struct ProgressBarView: View {
                     }
                 }
                 .animation(.easeInOut(duration: 0.1), value: isScrubbing)
-                .contentShape(Rectangle().size(CGSize(width: width, height: 44)))
+                .contentShape(Rectangle())
                 .gesture(
                     DragGesture(minimumDistance: 0)
                         .onChanged { value in
@@ -58,7 +58,7 @@ struct ProgressBarView: View {
                         }
                 )
             }
-            .frame(height: 20)
+            .frame(height: 44)
 
             // Time labels
             HStack {

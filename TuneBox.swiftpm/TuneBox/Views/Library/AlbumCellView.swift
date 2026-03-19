@@ -5,7 +5,7 @@ struct AlbumCellView: View {
 
     var body: some View {
         VStack(alignment: .leading, spacing: 6) {
-            ArtworkImageView(image: album.artwork, size: .infinity, cornerRadius: 8)
+            ArtworkImageView(image: album.artwork, cornerRadius: 8)
                 .aspectRatio(1, contentMode: .fit)
                 .shadow(color: .black.opacity(0.15), radius: 4, x: 0, y: 2)
 
