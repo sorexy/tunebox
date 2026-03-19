@@ -1,0 +1,15 @@
+# Xcode generated (use project.yml + xcodegen instead)
+*.xcodeproj/
+*.xcworkspace/
+DerivedData/
+.build/
+
+# macOS
+.DS_Store
+
+# Swift PM
+.swiftpm/xcode/
+
+# Playgrounds
+timeline.xctimeline
+playground.xcworkspace

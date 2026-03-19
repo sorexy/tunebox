@@ -30,7 +30,6 @@ struct SongRowView: View {
                 Image(systemName: "waveform")
                     .font(.system(size: 14))
                     .foregroundColor(.tuneBoxAccent)
-                    .symbolEffect(.variableColor.iterative.dimInactiveLayers)
             } else {
                 Text(song.duration.formattedAsTrackTime())
                     .font(.songDuration)
