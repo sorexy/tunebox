@@ -1,0 +1,55 @@
+name: TuneBox
+options:
+  bundleIdPrefix: com.tunebox
+  deploymentTarget:
+    iOS: "16.0"
+  xcodeVersion: "15.0"
+  generateEmptyDirectories: true
+  createIntermediateGroups: true
+
+settings:
+  base:
+    PRODUCT_BUNDLE_IDENTIFIER: com.tunebox.TuneBox
+    MARKETING_VERSION: "1.0.0"
+    CURRENT_PROJECT_VERSION: "1"
+    SWIFT_VERSION: "5.9"
+    TARGETED_DEVICE_FAMILY: "1"
+    SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD: "NO"
+    INFOPLIST_FILE: TuneBox/Resources/Info.plist
+    ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+    CODE_SIGN_STYLE: Automatic
+    DEVELOPMENT_TEAM: ""
+
+targets:
+  TuneBox:
+    type: application
+    platform: iOS
+    sources:
+      - path: TuneBox
+        excludes:
+          - "Preview Content/**"
+    resources:
+      - path: TuneBox/Preview Content
+    info:
+      path: TuneBox/Resources/Info.plist
+      properties:
+        UILaunchScreen:
+          UIColorName: ""
+        UISupportedInterfaceOrientations:
+          - UIInterfaceOrientationPortrait
+        UIApplicationSceneManifest:
+          UIApplicationSupportsMultipleScenes: false
+        UIBackgroundModes:
+          - audio
+        UIFileSharingEnabled: true
+        LSSupportsOpeningDocumentsInPlace: true
+        CFBundleDocumentTypes:
+          - CFBundleTypeName: Audio File
+            CFBundleTypeRole: Viewer
+            LSItemContentTypes:
+              - public.mp3
+              - public.mpeg-4-audio
+              - public.aiff-audio
+              - public.wav-audio
+              - public.aifc-audio
+              - org.xiph.flac
